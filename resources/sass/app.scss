@@ -1,0 +1,166 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+// Variables
+// @import 'variables';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+// Custom
+// @import "custom";
+
+// Soft UI Dashboard
+
+@import '~vue-soft-ui-dashboard/src/assets/css/nucleo-icons.css';
+@import '~vue-soft-ui-dashboard/src/assets/css/nucleo-svg.css';
+@import '~vue-soft-ui-dashboard/src/assets/scss/soft-ui-dashboard.scss';
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@import "mapbox-gl/dist/mapbox-gl.css";
+@import 'vue-select/dist/vue-select.css';
+/**
+ * Adjustments
+ */
+// Backgrounds
+$backGround1: '../images/background-image.webp';
+
+.bg-option-1 {
+    background-image: url($backGround1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-option-2 {
+    background-image: url($backGround1);
+}
+
+// Override fontawesome icon for the sidebar
+.icon-sm {
+
+    i.fa,
+    i.fas,
+    i.far,
+    i.fal,
+    i.fab,
+    i.fa-solid {
+        top: 2px;
+        font-size: .9rem !important;
+    }
+}
+
+// padding for forms in line buttons
+.pt-2rem {
+    padding-top: 2rem;
+}
+
+// Table headers
+table thead th {
+    text-transform: none !important;
+}
+
+/* Marker tweaks */
+.mapboxgl-popup {
+    padding-bottom: 20px;
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
+
+.mapboxgl-popup-content {
+    padding: 0;
+    width: 360px;
+}
+
+.mapboxgl-popup-content div.head {
+    background: $success;
+    color: $white;
+    margin: 0;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+}
+
+.mapboxgl-popup-content h6 {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mapboxgl-popup-content div.content {
+    padding: 5px 10px;
+
+    .description-container {
+        max-height: 24vh;
+        overflow-y: scroll;
+    }
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+    // margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+    border-bottom-color: $success;
+}
+
+/**
+ * Hack for modal show.
+ */
+.modal.show {
+    z-index: 100001!important;
+}
+
+.modal-backdrop.show {
+    z-index: 100000!important;
+}
+
+/**
+ * V-Select customizations
+ */
+.v-select .vs__search::placeholder,
+.v-select .vs__dropdown-toggle {
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: #495057;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem 0.5rem 0.75rem;
+}
+
+.v-select .vs__dropdown-toggle:focus-within {
+    box-shadow: 0 0 1px 2px #bcf76f;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    transition-property: box-shadow, border-color;
+    transition-duration: 0.15s, 0.15s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+}
+
+.v-select .vs__dropdown-menu {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+
+}
+
+.v-select .vs__dropdown-option--highlight:hover {
+    background-color: #82d616;
+    color: #fff;
+}
+
+.v-select .vs__dropdown-option--highlight {
+    background-color: #82d616;
+    color: #fff;
+}
+
+.v-select .vs__clear,
+.v-select .vs__open-indicator {
+    margin: 0 auto;
+    transform: scale(.8);
+}

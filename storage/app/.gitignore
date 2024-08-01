@@ -1,0 +1,8 @@
+*
+!public/
+!layers/
+!csv/
+!imports/
+!csv/plantilla-importacion-puntos.csv
+!manuales/
+!.gitignore

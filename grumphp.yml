@@ -1,0 +1,45 @@
+grumphp:
+  process_timeout: 120
+  fixer:
+    enabled: false
+    fix_by_default: false
+  tasks:
+    composer: ~
+    eslint:
+          bin: node_modules/.bin/eslint
+          triggered_by: [ js, jsx, ts, tsx, vue ]
+          whitelist_patterns:
+              - /^resources\/js\/(.*)/
+          config: .eslintrc.js
+          debug: false
+          format: table
+          max_warnings: ~
+          no_eslintrc: false
+          quiet: false
+    git_blacklist:
+      keywords:
+        - " die\\("
+        - " var_dump\\("
+        - " exit;"
+        - " dd\\("
+        - "^die\\("
+        - "^var_dump\\("
+        - "^exit;"
+        - "^dd\\("
+      triggered_by: [php]
+      regexp_type: E
+    phpcs:
+      standard: [PSR12]
+      sniffs: []
+      ignore_patterns:
+        ["blade.php", "database/*", "public/index.php", "server.php"]
+      triggered_by: [php]
+    phpstan:
+      memory_limit: "1024M"
+      ignore_patterns:
+        [
+          "public/index.php",
+          "app/Http/Middleware/Authenticate.php"
+        ]
+    #phpunit: ~
+    yamllint: ~

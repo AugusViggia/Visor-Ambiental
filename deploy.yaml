@@ -1,0 +1,23 @@
+import:
+    - recipe/laravel.php
+    - deploy/custom-recipe.php
+    - contrib/npm.php
+
+config:
+  repository: 'git@gitlab.com:outsourcearg/visor-ambiental.git'
+  ssh_multiplexing: true
+
+hosts:
+  testing:
+    hostname: '149.56.14.82'
+    remote_user: admin
+    deploy_path: '/home/admin/web/visor.outsourcearg.com.ar/deploy'
+
+tasks:
+  npm:run:prod:
+      - run: 'cd {{release_path}} && npm run prod'
+
+after:
+  deploy:failed: deploy:unlock
+  deploy: update_version_number
+  update_version_number: cleanup_release

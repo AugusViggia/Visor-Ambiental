@@ -1,0 +1,15 @@
+id,category_id,name
+1,1,Vertebrados
+2,1,Invertebrados
+3,1,Protístas
+4,1,Hongos
+5,1,Plantas
+6,2,Estaciones metoeorológicas
+7,3,Geomorfología
+8,3,Edafología
+9,3,Vulcanismo y Sismicidad
+10,3,Glaciología
+11,3,Geología
+12,3,Degradación del Medio y Desertificación
+13,4,Aguas Continentales
+14,4,Aguas Subterráneas
