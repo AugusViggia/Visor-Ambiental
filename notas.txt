@@ -1,0 +1,15 @@
+visor solo de jujuy
+revisar el boton de ecorregiones (bdd) 
+error de registro
+cargar la base de datos correspondiente
+dentro de bdd geometria puede tomar uno de estos 3 valores: punto, transecta o area
+en un futuro se va a requerir agregar una nueva cateogoria (solo el administrador)
+
+capas estaticas (modificar a "capas base") : ecorregiones capas estaticas, el resto son punto
+Estructura de la BDD: categoria -> subcategoria -> ecorregion
+
+planificar y crear un dashboard : categoria, sitios arqueologicos
+
+implementar un footer con menciones especiales
+
+funcionamiento de la denuncias de los puntos
