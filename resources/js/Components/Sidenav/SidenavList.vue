@@ -38,6 +38,17 @@
         </sidenav-collapse>
       </li>
 
+      <li class="nav-item">
+        <sidenav-collapse
+          nav-text="Categorías"
+          :to="{ name: 'Categories', route: route('categories.index') }"
+        >
+          <template #icon="{ isActive }">
+            <i class="icon-size mb-1 fa-solid fa-tags" :class="[isActive ? 'text-white' : 'text-dark']"></i>
+          </template>
+        </sidenav-collapse>
+      </li>
+
       <li class="nav-item mt-3" v-role="'ADM'">
         <h6 class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6 ms-2">
           Administración

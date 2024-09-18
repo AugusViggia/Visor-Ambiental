@@ -74,7 +74,7 @@ import JetSecondaryButton from '@/Jetstream/SecondaryButton'
 import JetButton from '@/Jetstream/Button'
 import { Inertia } from '@inertiajs/inertia'
 // import route from '../../../../../vendor/tightenco/ziggy/src/js'
-import route from '@/ziggy'
+import { route } from 'ziggy-js'
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
